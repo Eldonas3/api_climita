@@ -1,0 +1,137 @@
+CRITICAL - 2024-04-17 04:44:38 --> Call to undefined method App\Controllers\ClimaController::initController()
+in SYSTEMPATH\CodeIgniter.php on line 892.
+ 1 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 04:46:16 --> Call to undefined method App\Controllers\ClimaController::initController()
+in SYSTEMPATH\CodeIgniter.php on line 892.
+ 1 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 04:59:04 --> Call to undefined method App\Controllers\ClimaController::initController()
+in SYSTEMPATH\CodeIgniter.php on line 892.
+ 1 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 05:00:29 --> Call to undefined method App\Controllers\ClimaController::initController()
+in SYSTEMPATH\CodeIgniter.php on line 892.
+ 1 SYSTEMPATH\CodeIgniter.php(485): CodeIgniter\CodeIgniter->createController()
+ 2 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 3 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 4 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 05:02:34 --> Undefined variable $datos
+in APPPATH\Views\datos.php on line 3.
+ 1 APPPATH\Views\datos.php(3): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datos', 'D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\app\\Views\\datos.php', 3)
+ 2 SYSTEMPATH\View\View.php(226): include('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\app\\Views\\datos.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('datos', [], true)
+ 5 APPPATH\Controllers\ClimaController.php(17): view('datos', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getUbicaciones()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+ERROR - 2024-04-17 05:04:01 --> mysqli_sql_exception: Unknown column 'clima.deleted_at' in 'where clause' in D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Universidad\TEC\Semestre VI\clima\clima\system\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Universidad\TEC\Semestre VI\clima\clima\system\BaseModel.php(662): CodeIgniter\Model->doFirst()
+#6 D:\Universidad\TEC\Semestre VI\clima\clima\app\Models\ClimaModel.php(85): CodeIgniter\BaseModel->first()
+#7 D:\Universidad\TEC\Semestre VI\clima\clima\app\Controllers\ClimaController.php(28): App\Models\ClimaModel->getClimaByHora('11:02:59')
+#8 D:\Universidad\TEC\Semestre VI\clima\clima\system\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaByHora('11:02:59')
+#9 D:\Universidad\TEC\Semestre VI\clima\clima\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+#10 D:\Universidad\TEC\Semestre VI\clima\clima\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Universidad\TEC\Semestre VI\clima\clima\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 D:\Universidad\TEC\Semestre VI\clima\clima\system\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\...')
+#13 {main}
+CRITICAL - 2024-04-17 05:04:01 --> Unknown column 'clima.deleted_at' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `clima`
+WHERE `hora` = :hora:
+AND `clima`.`deleted_at` IS NULL
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(264): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(662): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ClimaModel.php(85): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\ClimaController.php(28): App\Models\ClimaModel->getClimaByHora('11:02:59')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaByHora('11:02:59')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 05:09:40 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::first()
+in APPPATH\Models\ClimaModel.php on line 87.
+ 1 APPPATH\Controllers\ClimaController.php(28): App\Models\ClimaModel->getClimaByHora('11:02:59')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaByHora('11:02:59')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+ERROR - 2024-04-17 05:27:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL' at line 3 in D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT `latitud...', 0)
+#1 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `latitud...')
+#2 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `latitud...')
+#3 D:\Universidad\TEC\Semestre VI\clima\clima\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `latitud...', Array, false)
+#4 D:\Universidad\TEC\Semestre VI\clima\clima\app\Models\ClimaModel.php(77): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Universidad\TEC\Semestre VI\clima\clima\app\Controllers\ClimaController.php(34): App\Models\ClimaModel->getClimaByFecha()
+#6 D:\Universidad\TEC\Semestre VI\clima\clima\system\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaByFecha()
+#7 D:\Universidad\TEC\Semestre VI\clima\clima\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+#8 D:\Universidad\TEC\Semestre VI\clima\clima\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Universidad\TEC\Semestre VI\clima\clima\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\Universidad\TEC\Semestre VI\clima\clima\system\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\...')
+#11 {main}
+CRITICAL - 2024-04-17 05:27:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL
+AND `fecha` < IS NULL' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT `latitud`
+FROM `clima`
+WHERE `fecha` > IS NULL
+AND `fecha` < IS NULL', [], false)
+ 2 APPPATH\Models\ClimaModel.php(77): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\ClimaController.php(34): App\Models\ClimaModel->getClimaByFecha()
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaByFecha()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 05:38:49 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::selectMax()
+in APPPATH\Models\ClimaModel.php on line 100.
+ 1 APPPATH\Controllers\ClimaController.php(41): App\Models\ClimaModel->getClimaExtremo()
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaExtremo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 05:41:34 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select_max()
+in APPPATH\Models\ClimaModel.php on line 100.
+ 1 APPPATH\Controllers\ClimaController.php(41): App\Models\ClimaModel->getClimaExtremo()
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaExtremo()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 05:53:16 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::findAll()
+in APPPATH\Models\ClimaModel.php on line 116.
+ 1 APPPATH\Controllers\ClimaController.php(47): App\Models\ClimaModel->getClimaPorUbicacion('San Liliana los bajos')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaPorUbicacion('San Liliana los bajos')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-17 06:02:43 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::where()
+in APPPATH\Models\ClimaModel.php on line 128.
+ 1 APPPATH\Controllers\ClimaController.php(53): App\Models\ClimaModel->getClimaPromedio('2024-03-04', '2024-03-18')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getClimaPromedio('2024-03-04', '2024-03-18')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
