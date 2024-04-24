@@ -1,0 +1,15 @@
+CRITICAL - 2024-04-19 18:48:13 --> Undefined variable $responseresponse
+in APPPATH\Controllers\ClimaController.php on line 26.
+ 1 APPPATH\Controllers\ClimaController.php(26): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $responseresponse', 'D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\app\\Controllers\\ClimaController.php', 26)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getUbicaciones2()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
+CRITICAL - 2024-04-19 18:48:35 --> Class "App\Controllers\Response" not found
+in APPPATH\Controllers\ClimaController.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\ClimaController->getUbicaciones2()
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClimaController))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\Universidad\\TEC\\Semestre VI\\clima\\clima\\public\\index.php')
