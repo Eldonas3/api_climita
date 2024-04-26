@@ -83,7 +83,7 @@ class ClimaController extends Controller{
         $response = response();
         $response->setStatusCode(Response::HTTP_OK);
         $response->setBody(json_encode($data));
-        $response->setHeader('Content-Type','text/html');
+        $response->setHeader('Content-Type','text/json');
         $response->noCache();
 
         $response->send();
